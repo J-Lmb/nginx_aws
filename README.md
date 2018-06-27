@@ -1,5 +1,7 @@
 # nginx_aws
 
+Please read Step1.txt file before proceeding.
+
 Deploying Simulations Checkpoint hosted on AWS EC2
 My Github lunk: https://github.com/J-Lmb/nginx_aws
 
@@ -16,4 +18,5 @@ NGINX: NGINX has advanced load-balancing, security, and optimization features th
 Certbo: Certbot is EFF's tool to obtain certs from Let's Encrypt and (optionally) auto-enable HTTPS on your server.
 
 AWS: Amazon Web Services offers reliable, scalable, and inexpensive cloud computing services. Free to join, pay only for what you use.
+
 
