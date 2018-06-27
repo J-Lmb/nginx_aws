@@ -14,8 +14,18 @@ function workstation_setting(){
 	sudo apt-get update
 	sudo apt-get install git
 	sudo apt-get install -y python3-pip
-        sudo apt-get install -y npm
+	sudo apt-get install -y npm
 
+	echo ############ Install Nodejs with NPM ###########
+	echo -----Step 1 – Installing Prerequisites-----
+	sudo apt-get install curl
+	sudo apt-get install python-software-properties
+	echo -----Step 2 – Adding NodeJs PPA-----
+	curl -sL https://deb.nodesource.com/setup_6.x | sudo -E bash -
+	echo -----Step 3 – Installing Node.js and NPM-----
+	sudo apt-get update
+	sudo apt-get install nodejs
+        
 }
 
 function app_project(){
