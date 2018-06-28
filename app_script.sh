@@ -25,7 +25,7 @@ function workstation_setting(){
 	echo -----Step 3 – Installing Node.js and NPM-----
 	sudo apt-get update
 	sudo apt-get install nodejs
-        
+
 }
 
 function app_project(){
