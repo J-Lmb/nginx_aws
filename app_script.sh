@@ -101,6 +101,7 @@ function run(){
 	workstation_setting
 	app_project
 	nginx_installation
+	ssl_cert
 	start_app
 }
 
