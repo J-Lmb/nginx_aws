@@ -51,7 +51,7 @@ function nginx_installation(){
     	server {
         	listen 80 default_server;
             	listen [::]:80 default_server;
-            	server_name _;
+            	server_name www.jlmb.tk;
             	location / {
                     	proxy_pass http://127.0.0.1:3000/;
                     	proxy_set_header HOST \$host;
@@ -68,6 +68,24 @@ EOF'
 	echo ############ Check nginx status ############
     	sudo systemctl restart nginx
     	sudo nginx -t
+}
+
+function ssl_cert(){
+    
+    echo ########### Installing Certbot ###########
+    sudo add-apt-repository ppa:certbot/certbot
+    sudo apt-get update
+    sudo apt-get install python-certbot-nginx
+    sudo nginx -t
+    sudo systemctl reload nginx
+
+    echo ########### Allowing HTPS through the Firewall  ###########
+    sudo ufw allow 'Nginx Full'
+    sudo ufw delete allow 'Nginx HTTP'
+
+    echo ########### Obtaining an SSL Certificate ###########
+    sudo certbot --nginx -d www.jlmb.tk
+    
 }
 
 function start_app(){
