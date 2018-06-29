@@ -1,6 +1,5 @@
 # nginx_aws
 
-Please read Step1.txt file before proceeding.
 
 Deploying Simulations Checkpoint hosted on AWS EC2
 My Github lunk: https://github.com/J-Lmb/nginx_aws
